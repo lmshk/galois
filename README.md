@@ -23,7 +23,7 @@ exponentiation.
 field representation, the reducing polynomial can also be provided on
 construction:
 
-    iex> rijndael = Galois.Field.Binary.Simple.new(8, modulus: 285)
+    iex> rijndael = Galois.Field.Binary.Simple.new(8, modulus: 283)
     iex> Galois.Field.product(rijndael, 42, 23)
     64
 
@@ -41,7 +41,7 @@ also be specified explicitly:
 
     iex> rijndael = Galois.Field.Binary.Tabled.new(
     ...>  8,
-    ...>  modulus: 285,
+    ...>  modulus: 283,
     ...>  generator: 3
     ...> )
     iex> Galois.Field.product(rijndael, 42, 23)
@@ -52,7 +52,7 @@ the precomputation to happen at compile time if the parameters are fixed:
 
     iex> rijndael = Galois.Field.Binary.Tabled.static(
     ...>  8,
-    ...>  modulus: 285,
+    ...>  modulus: 283,
     ...>  generator: 3
     ...> )
     iex> Galois.Field.product(rijndael, 42, 23)
